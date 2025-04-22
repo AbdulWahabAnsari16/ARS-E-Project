@@ -13,6 +13,6 @@ namespace ARS.Models
         public DateTime CreatedAt { get; set; }
         public ICollection<UserProfile> Profile { get; set; }
         public List<Reservation> Reservations { get; set; }
-        public List<MileageHistory> MileageHistories { get; set; }
+        public ICollection<MileageHistory> MileageHistories { get; set; }
     }
 }

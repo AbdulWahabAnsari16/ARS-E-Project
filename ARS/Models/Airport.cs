@@ -9,14 +9,17 @@ namespace ARS.Models
         public int AirportId { get; set; }
         public string Name { get; set; }
         public string IATACode { get; set; }
+
         public int CityId { get; set; }
         [ForeignKey("CityId")]
         public City City { get; set; }
 
-        // Collections for routes where this airport is the origin or destination
+        // Navigation properties for routes
         public ICollection<FlightRoutes> OriginRoutes { get; set; }
         public ICollection<FlightRoutes> DestinationRoutes { get; set; }
-        //[NotMapped]
-        //public ICollection<FlightSchedule> FlightSchedules { get; set; }
+
+        // Other navigation properties
+        public ICollection<FlightSchedule> DepartureSchedules { get; set; }
+        public ICollection<FlightSchedule> ArrivalSchedules { get; set; }
     }
 }

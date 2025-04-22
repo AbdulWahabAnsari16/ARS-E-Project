@@ -28,19 +28,59 @@ namespace ARS.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure the FlightRoutes relationships
+            // Configure FlightRoutes relationships
             modelBuilder.Entity<FlightRoutes>()
-                .HasOne(fr => fr.OriginAirport)   // Navigation property in FlightRoutes
-                .WithMany(a => a.OriginRoutes)   // Collection in Airport
+                .HasOne(fr => fr.OriginAirport)
+                .WithMany(a => a.OriginRoutes)
                 .HasForeignKey(fr => fr.OriginAirportID)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<FlightRoutes>()
-                .HasOne(fr => fr.DestinationAirport) // Navigation property in FlightRoutes
-                .WithMany(a => a.DestinationRoutes)  // Collection in Airport
+                .HasOne(fr => fr.DestinationAirport)
+                .WithMany(a => a.DestinationRoutes)
                 .HasForeignKey(fr => fr.DestinationAirportID)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configure FlightSchedule relationships
+            modelBuilder.Entity<FlightSchedule>()
+                .HasOne(fs => fs.DepartureAirport)
+                .WithMany(a => a.DepartureSchedules)
+                .HasForeignKey(fs => fs.DepartureAirportID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FlightSchedule>()
+                .HasOne(fs => fs.ArrivalAirport)
+                .WithMany(a => a.ArrivalSchedules)  // Explicitly maps to Airport.ArrivalSchedules
+                .HasForeignKey(fs => fs.ArrivalAirportID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // MileageHistory configurations
+            modelBuilder.Entity<MileageHistory>()
+                .HasOne(m => m.Reservation)
+                .WithMany(r => r.History)
+                .HasForeignKey(m => m.ReservationID)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MileageHistory>()
+                .HasOne(m => m.User)
+                .WithMany(u => u.MileageHistories)
+                .HasForeignKey(m => m.UserID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            // Decimal precision configurations
+            modelBuilder.Entity<CancellationPolicie>()
+                .Property(c => c.RefundPercent)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Payment>()
+                .Property(p => p.Amount)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<PricingRule>()
+                .Property(p => p.PriceMultiplier)
+                .HasPrecision(18, 2);
         }
+
 
     }
 

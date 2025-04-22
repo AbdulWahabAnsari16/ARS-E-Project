@@ -10,11 +10,11 @@ namespace ARS.Models
 
         public int OriginAirportID { get; set; }
         [ForeignKey("OriginAirportID")]
-        public Airport OriginAirport { get; set; }  // Renamed from 'Airport'
+        public Airport OriginAirport { get; set; }
 
         public int DestinationAirportID { get; set; }
         [ForeignKey("DestinationAirportID")]
-        public Airport DestinationAirport { get; set; }  // Renamed from 'Airports'
+        public Airport DestinationAirport { get; set; }
 
         public double Distance { get; set; }
     }
