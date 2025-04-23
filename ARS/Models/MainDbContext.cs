@@ -10,6 +10,7 @@ namespace ARS.Models
         public DbSet<Airport> Airports { get; set; }
         public DbSet<CancellationPolicie> CancellationPolicies { get; set; } // Fixed typo
         public DbSet<City> Cities { get; set; }
+        public DbSet<Class> Classes { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<FlightRoutes> FlightRoutes { get; set; }
 

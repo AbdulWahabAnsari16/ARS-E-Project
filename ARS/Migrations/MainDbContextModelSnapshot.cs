@@ -92,6 +92,26 @@ namespace ARS.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("ARS.Models.Class", b =>
+                {
+                    b.Property<int>("ClassID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClassID"));
+
+                    b.Property<string>("ClassName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Description")
+                        .HasColumnType("int");
+
+                    b.HasKey("ClassID");
+
+                    b.ToTable("Classes");
+                });
+
             modelBuilder.Entity("ARS.Models.Flight", b =>
                 {
                     b.Property<int>("FlightID")
@@ -103,9 +123,6 @@ namespace ARS.Migrations
                     b.Property<string>("AircraftType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<TimeSpan>("BaseDuration")
-                        .HasColumnType("time");
 
                     b.Property<string>("FlightNumber")
                         .IsRequired()
@@ -156,9 +173,8 @@ namespace ARS.Migrations
                     b.Property<DateTime>("ArrivalDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Class")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ClassID")
+                        .HasColumnType("int");
 
                     b.Property<int>("DepartureAirportID")
                         .HasColumnType("int");
@@ -175,6 +191,8 @@ namespace ARS.Migrations
                     b.HasKey("ScheduleID");
 
                     b.HasIndex("ArrivalAirportID");
+
+                    b.HasIndex("ClassID");
 
                     b.HasIndex("DepartureAirportID");
 
@@ -317,9 +335,8 @@ namespace ARS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RuleID"));
 
-                    b.Property<string>("Class")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ClassID")
+                        .HasColumnType("int");
 
                     b.Property<int>("MaxDaysBefore")
                         .HasColumnType("int");
@@ -332,6 +349,8 @@ namespace ARS.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("RuleID");
+
+                    b.HasIndex("ClassID");
 
                     b.ToTable("PricingRules");
                 });
@@ -488,6 +507,12 @@ namespace ARS.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("ARS.Models.Class", "Class")
+                        .WithMany("Flights")
+                        .HasForeignKey("ClassID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ARS.Models.Airport", "DepartureAirport")
                         .WithMany("DepartureSchedules")
                         .HasForeignKey("DepartureAirportID")
@@ -501,6 +526,8 @@ namespace ARS.Migrations
                         .IsRequired();
 
                     b.Navigation("ArrivalAirport");
+
+                    b.Navigation("Class");
 
                     b.Navigation("DepartureAirport");
 
@@ -567,6 +594,17 @@ namespace ARS.Migrations
                     b.Navigation("Reservation");
                 });
 
+            modelBuilder.Entity("ARS.Models.PricingRule", b =>
+                {
+                    b.HasOne("ARS.Models.Class", "Class")
+                        .WithMany("Rules")
+                        .HasForeignKey("ClassID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Class");
+                });
+
             modelBuilder.Entity("ARS.Models.Reservation", b =>
                 {
                     b.HasOne("ARS.Models.User", "User")
@@ -603,6 +641,13 @@ namespace ARS.Migrations
             modelBuilder.Entity("ARS.Models.City", b =>
                 {
                     b.Navigation("airports");
+                });
+
+            modelBuilder.Entity("ARS.Models.Class", b =>
+                {
+                    b.Navigation("Flights");
+
+                    b.Navigation("Rules");
                 });
 
             modelBuilder.Entity("ARS.Models.Flight", b =>

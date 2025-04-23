@@ -24,7 +24,9 @@ namespace ARS.Models
 
         public DateTime DepartureDateTime { get; set; }
         public DateTime ArrivalDateTime { get; set; }
-        public string Class { get; set; }
+        public int ClassID { get; set; }
+        [ForeignKey("ClassID")]
+        public Class Class { get; set; }
         public int SeatsAvailable { get; set; }
 
         public List<ItinerarySegment> Segments { get; set; } = new();

@@ -41,34 +41,31 @@ namespace ARS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Classes",
+                columns: table => new
+                {
+                    ClassID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ClassName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Classes", x => x.ClassID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Flights",
                 columns: table => new
                 {
                     FlightID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FlightNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AircraftType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BaseDuration = table.Column<TimeSpan>(type: "time", nullable: false)
+                    AircraftType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Flights", x => x.FlightID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PricingRules",
-                columns: table => new
-                {
-                    RuleID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Class = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MinDaysBefore = table.Column<int>(type: "int", nullable: false),
-                    MaxDaysBefore = table.Column<int>(type: "int", nullable: false),
-                    PriceMultiplier = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PricingRules", x => x.RuleID);
                 });
 
             migrationBuilder.CreateTable(
@@ -106,6 +103,28 @@ namespace ARS.Migrations
                         column: x => x.CityId,
                         principalTable: "Cities",
                         principalColumn: "CityId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PricingRules",
+                columns: table => new
+                {
+                    RuleID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ClassID = table.Column<int>(type: "int", nullable: false),
+                    MinDaysBefore = table.Column<int>(type: "int", nullable: false),
+                    MaxDaysBefore = table.Column<int>(type: "int", nullable: false),
+                    PriceMultiplier = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PricingRules", x => x.RuleID);
+                    table.ForeignKey(
+                        name: "FK_PricingRules_Classes_ClassID",
+                        column: x => x.ClassID,
+                        principalTable: "Classes",
+                        principalColumn: "ClassID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -198,7 +217,7 @@ namespace ARS.Migrations
                     ArrivalAirportID = table.Column<int>(type: "int", nullable: false),
                     DepartureDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ArrivalDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Class = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClassID = table.Column<int>(type: "int", nullable: false),
                     SeatsAvailable = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -216,6 +235,12 @@ namespace ARS.Migrations
                         principalTable: "Airports",
                         principalColumn: "AirportId",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_FlightSchedules_Classes_ClassID",
+                        column: x => x.ClassID,
+                        principalTable: "Classes",
+                        principalColumn: "ClassID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_FlightSchedules_Flights_FlightID",
                         column: x => x.FlightID,
@@ -346,6 +371,11 @@ namespace ARS.Migrations
                 column: "ArrivalAirportID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_FlightSchedules_ClassID",
+                table: "FlightSchedules",
+                column: "ClassID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FlightSchedules_DepartureAirportID",
                 table: "FlightSchedules",
                 column: "DepartureAirportID");
@@ -384,6 +414,11 @@ namespace ARS.Migrations
                 name: "IX_Payments_ReservationID",
                 table: "Payments",
                 column: "ReservationID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PricingRules_ClassID",
+                table: "PricingRules",
+                column: "ClassID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reservations_UserID",
@@ -426,6 +461,9 @@ namespace ARS.Migrations
 
             migrationBuilder.DropTable(
                 name: "Airports");
+
+            migrationBuilder.DropTable(
+                name: "Classes");
 
             migrationBuilder.DropTable(
                 name: "Flights");

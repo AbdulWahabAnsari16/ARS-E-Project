@@ -8,7 +8,8 @@ namespace ARS.Models
         public int FlightID { get; set; }
         public string FlightNumber { get; set; }
         public string AircraftType { get; set; }
-        public TimeSpan BaseDuration { get; set; } // Minutes
+
+        //public TimeSpan BaseDuration { get; set; } // Minutes
 
         public List<FlightSchedule> Schedules { get; set; }
     }

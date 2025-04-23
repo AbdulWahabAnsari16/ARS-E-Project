@@ -4,6 +4,7 @@ wwwroot\AdminAssets\assets\demo\chart-pie-demo.js
 wwwroot\AdminAssets\assets\demo\datatables-demo.js
 wwwroot\AdminAssets\assets\img\error-404-monochrome.svg
 wwwroot\AdminAssets\css\styles.css
+wwwroot\AdminAssets\js\airportdatatable.js
 wwwroot\AdminAssets\js\citydatatable.js
 wwwroot\AdminAssets\js\datatables-simple.js
 wwwroot\AdminAssets\js\scripts.js

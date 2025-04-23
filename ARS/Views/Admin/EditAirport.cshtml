@@ -1,6 +1,6 @@
 ﻿@model Airport
 @{
-    ViewData["Title"] = "AddAirport";
+    ViewData["Title"] = "EditAirport";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -16,11 +16,12 @@
     <main>
         <div class="container-fluid px-4">
             <div class="card-header">
-                <h3 class="text-center font-weight-light my-4">Add Airport</h3>
+                <h3 class="text-center font-weight-light my-4">Edit Airport</h3>
             </div>
             <div class="card-body">
                 <h4 class="msg">@ViewBag.msg</h4>
                 <form method="post">
+                    <input type="hidden" asp-for="AirportId" />
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
@@ -45,7 +46,7 @@
                         </div>
                     </div>
                     <div class="mt-4 mb-0">
-                        <div class="d-grid"><button type="submit" class="btn btn-primary btn-block">Add Airport</button></div>
+                        <div class="d-grid"><button type="submit" class="btn btn-primary btn-block">Edit Airport</button></div>
                     </div>
                 </form>
             </div>
