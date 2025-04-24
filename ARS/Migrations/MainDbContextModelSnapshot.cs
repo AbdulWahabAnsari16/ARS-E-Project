@@ -48,7 +48,7 @@ namespace ARS.Migrations
                     b.ToTable("Airports");
                 });
 
-            modelBuilder.Entity("ARS.Models.CancellationPolicie", b =>
+            modelBuilder.Entity("ARS.Models.CancellationPolicy", b =>
                 {
                     b.Property<int>("PolicyID")
                         .ValueGeneratedOnAdd()

@@ -2,7 +2,7 @@
 
 namespace ARS.Models
 {
-    public class CancellationPolicie
+    public class CancellationPolicy
     {
         [Key]
         public int PolicyID { get; set; }

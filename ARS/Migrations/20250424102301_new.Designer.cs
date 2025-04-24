@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ARS.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20250424042604_first")]
-    partial class first
+    [Migration("20250424102301_new")]
+    partial class @new
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,7 @@ namespace ARS.Migrations
                     b.ToTable("Airports");
                 });
 
-            modelBuilder.Entity("ARS.Models.CancellationPolicie", b =>
+            modelBuilder.Entity("ARS.Models.CancellationPolicy", b =>
                 {
                     b.Property<int>("PolicyID")
                         .ValueGeneratedOnAdd()

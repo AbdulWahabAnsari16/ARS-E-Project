@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\views\\admin\\viewfltroutes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|solutionrelative:ars\\views\\admin\\viewfltroutes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|solutionrelative:ars\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\views\\admin\\editfltroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|solutionrelative:ars\\views\\admin\\editfltroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Migrations\\20250424102301_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ARS\\Migrations\\20250424102301_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\views\\admin\\addfltroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|solutionrelative:ars\\views\\admin\\addfltroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\views\\admin\\viewpricingrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|solutionrelative:ars\\views\\admin\\viewpricingrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA4BA010-080C-458D-8923-BC422CF7E8F7}|ARS\\ARS.csproj|c:\\users\\asp.aptechnk1\\desktop\\ars-e-project\\ars\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,86 +26,59 @@
       "DocumentGroups": [
         {
           "DockedHeight": 306,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250424102301_new.cs",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Migrations\\20250424102301_new.cs",
+              "RelativeDocumentMoniker": "ARS\\Migrations\\20250424102301_new.cs",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Migrations\\20250424102301_new.cs",
+              "RelativeToolTip": "ARS\\Migrations\\20250424102301_new.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:23:01.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditFltRoute.cshtml",
-              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\EditFltRoute.cshtml",
-              "RelativeDocumentMoniker": "ARS\\Views\\Admin\\EditFltRoute.cshtml",
-              "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\EditFltRoute.cshtml",
-              "RelativeToolTip": "ARS\\Views\\Admin\\EditFltRoute.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Title": "ViewPricingRules.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\ViewPricingRules.cshtml",
+              "RelativeDocumentMoniker": "ARS\\Views\\Admin\\ViewPricingRules.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\ViewPricingRules.cshtml",
+              "RelativeToolTip": "ARS\\Views\\Admin\\ViewPricingRules.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD0AAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T05:39:07.379Z",
+              "WhenOpened": "2025-04-24T10:20:38.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddFltRoute.cshtml",
-              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\AddFltRoute.cshtml",
-              "RelativeDocumentMoniker": "ARS\\Views\\Admin\\AddFltRoute.cshtml",
-              "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\AddFltRoute.cshtml",
-              "RelativeToolTip": "ARS\\Views\\Admin\\AddFltRoute.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T04:43:57.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ViewFltRoutes.cshtml",
-              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\ViewFltRoutes.cshtml",
-              "RelativeDocumentMoniker": "ARS\\Views\\Admin\\ViewFltRoutes.cshtml",
-              "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Admin\\ViewFltRoutes.cshtml",
-              "RelativeToolTip": "ARS\\Views\\Admin\\ViewFltRoutes.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAD0AAAClAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T04:43:46.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "_LayoutAdmin.cshtml",
               "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Shared\\_LayoutAdmin.cshtml",
               "RelativeDocumentMoniker": "ARS\\Views\\Shared\\_LayoutAdmin.cshtml",
               "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Views\\Shared\\_LayoutAdmin.cshtml",
               "RelativeToolTip": "ARS\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFkAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAmwE8AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-22T01:42:42.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "ARS\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\asp.APTECHNK1\\Desktop\\ARS-E-Project\\ARS\\Controllers\\AdminController.cs",
               "RelativeToolTip": "ARS\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAA2wJcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAA4wGoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T01:36:19.415Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 94,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

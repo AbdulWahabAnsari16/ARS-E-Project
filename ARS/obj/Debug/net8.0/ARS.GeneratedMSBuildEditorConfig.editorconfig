@@ -38,12 +38,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ2xhc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/AddCnclPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ25jbFBvbGljeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/AddFlight.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRmxpZ2h0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/AddFltRoute.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRmx0Um91dGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/AddFltSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRmx0U2NoZWR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/AddPricingRule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUHJpY2luZ1J1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditAirport.cshtml]
@@ -58,12 +70,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENsYXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditCnclPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENuY2xQb2xpY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditFlight.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZsaWdodC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditFltRoute.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZsdFJvdXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditFltSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZsdFNjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/EditPricingRule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFByaWNpbmdSdWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/Index.cshtml]
@@ -90,8 +114,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NsYXNzZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/ViewCnclPolicies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NuY2xQb2xpY2llcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/ViewFltRoutes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0ZsdFJvdXRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/ViewFltSchedules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0ZsdFNjaGVkdWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/ViewPricingRules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1ByaWNpbmdSdWxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Home/Index.cshtml]

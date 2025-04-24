@@ -233,5 +233,140 @@ namespace ARS.Controllers
             db.SaveChanges();
             return RedirectToAction("ViewClasses");
         }
+
+
+        // FlightSchedule Section
+        public IActionResult AddFltSchedule()
+        {
+            var Flight = db.Flights.ToList();
+            ViewBag.flights = new SelectList(Flight, "FlightID", "FlightNumber");
+            var airports = db.Airports.ToList();
+            ViewBag.airports = new SelectList(airports, "AirportId", "IATACode");
+            var classes = db.Classes.ToList();
+            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddFltSchedule(FlightSchedule flightSchedule)
+        {
+            db.FlightSchedules.Add(flightSchedule);
+            db.SaveChanges();
+            ViewBag.msg = "Inserted";
+            return RedirectToAction("ViewFltSchedules");
+        }
+        public IActionResult ViewFltSchedules()
+        {
+            var list = db.FlightSchedules
+                         .Include(fr => fr.DepartureAirport)
+                         .Include(fr => fr.ArrivalAirport)
+                         .Include(fr => fr.Flight)
+                         .Include(fr => fr.Class)
+                         .ToList();
+            return View(list);
+        }
+        public IActionResult EditFltSchedule(int? id)
+        {
+            var data = db.FlightSchedules.Find(id);
+            var Flight = db.Flights.ToList();
+            ViewBag.flights = new SelectList(Flight, "FlightID", "FlightNumber");
+            var airports = db.Airports.ToList();
+            ViewBag.airports = new SelectList(airports, "AirportId", "IATACode");
+            var classes = db.Classes.ToList();
+            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult EditFltSchedule(FlightSchedule flightSchedule)
+        {
+            db.FlightSchedules.Update(flightSchedule);
+            db.SaveChanges();
+            return RedirectToAction("ViewFltSchedules");
+        }
+        public IActionResult DeleteFltSchedule(int? id)
+        {
+            var data = db.FlightSchedules.Find(id);
+            db.FlightSchedules.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("ViewFltSchedules");
+        }
+
+        // PricingRules Section
+        public IActionResult AddPricingRule()
+        {
+            var classes = db.Classes.ToList();
+            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddPricingRule(PricingRule pricingRule)
+        {
+            db.PricingRules.Add(pricingRule);
+            db.SaveChanges();
+            return RedirectToAction("ViewPricingRules");
+        }
+        public IActionResult ViewPricingRules()
+        {
+            var list = db.PricingRules.Include(classes => classes.Class);
+            return View(list);
+        }
+        public IActionResult EditPricingRule(int? id)
+        {
+            var data = db.PricingRules.Find(id);
+            var classes = db.Classes.ToList();
+            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult EditPricingRule(PricingRule pricingRule)
+        {
+            db.PricingRules.Update(pricingRule);
+            db.SaveChanges();
+            return RedirectToAction("ViewPricingRules");
+        }
+        public IActionResult DeletePricingRule(int? id)
+        {
+            var data = db.PricingRules.Find(id);
+            db.PricingRules.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("ViewPricingRules");
+        }
+
+        // CancellationPolicies Section
+        public IActionResult AddCnclPolicy()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddCnclPolicy(CancellationPolicy cnclpolicy)
+        {
+            db.CancellationPolicies.Add(cnclpolicy);
+            db.SaveChanges();
+            return RedirectToAction("ViewCnclPolicies");
+        }
+        public IActionResult ViewCnclPolicies()
+        {
+            var list = db.CancellationPolicies.ToList();
+            return View(list);
+        }
+        public IActionResult EditCnclPolicy(int? id)
+        {
+            var data = db.CancellationPolicies.Find(id);
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult EditCnclPolicy(CancellationPolicy cnclpolicy)
+        {
+            db.CancellationPolicies.Update(cnclpolicy);
+            db.SaveChanges();
+            return RedirectToAction("ViewCnclPolicies");
+        }
+
+        public IActionResult DeleteCnclPolicy(int? id)
+        {
+            var data = db.CancellationPolicies.Find(id);
+            db.CancellationPolicies.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("ViewCnclPolicies");
+        }
     }
 }
