@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ARS.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20250423000559_first")]
+    [Migration("20250424042604_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -107,8 +107,8 @@ namespace ARS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Description")
-                        .HasColumnType("int");
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ClassID");
 

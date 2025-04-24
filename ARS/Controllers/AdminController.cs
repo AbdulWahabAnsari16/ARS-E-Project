@@ -108,6 +108,7 @@ namespace ARS.Controllers
             return RedirectToAction("ViewAirports");
         }
 
+
         // FlightRoutes Section
         public IActionResult AddFltRoute()
         {
@@ -120,16 +121,40 @@ namespace ARS.Controllers
         {
             db.FlightRoutes.Add(routes);
             db.SaveChanges();
-            ViewBag.msg = "Inserted";
+            //ViewBag.msg = "Inserted";
             var airports = db.Airports.ToList();
             ViewBag.airport = new SelectList(airports, "AirportId", "IATACode");
-            return View();
+            return RedirectToAction("ViewFltRoutes");
         }
 
         public IActionResult ViewFltRoutes()
         {
-            var list = db.FlightRoutes.Include(airports => airports.OriginAirport);
+            var list = db.FlightRoutes
+                         .Include(fr => fr.OriginAirport)
+                         .Include(fr => fr.DestinationAirport)
+                         .ToList();
             return View(list);
+        }
+        public IActionResult EditFltRoute(int? id)
+        {         
+            var data = db.FlightRoutes.Find(id);
+            var airports = db.Airports.ToList();
+            ViewBag.airport = new SelectList(airports, "AirportId", "IATACode");
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult EditFltRoute(FlightRoutes flightRoute)
+        {
+            db.FlightRoutes.Update(flightRoute);
+            db.SaveChanges();
+            return RedirectToAction("ViewFltRoutes");
+        }
+        public IActionResult DeleteFltRoute(int? id)
+        {
+            var data = db.FlightRoutes.Find(id);
+            db.FlightRoutes.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("ViewFltRoutes");
         }
 
         // Flight Section
@@ -175,6 +200,38 @@ namespace ARS.Controllers
         public IActionResult AddClass()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult AddClass(Class classes)
+        {
+            db.Classes.Add(classes);
+            db.SaveChanges();
+            return RedirectToAction("ViewClasses");
+        }
+
+        public IActionResult ViewClasses()
+        {
+            var list = db.Classes.ToList();
+            return View(list);
+        }
+        public IActionResult EditClass(int? id)
+        {
+            var data = db.Classes.Find(id);
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult EditClass(Class classes)
+        {
+            db.Classes.Update(classes);
+            db.SaveChanges();
+            return RedirectToAction("ViewClasses");
+        }
+        public IActionResult DeleteClass(int? id)
+        {
+            var data = db.Classes.Find(id);
+            db.Classes.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("ViewClasses");
         }
     }
 }

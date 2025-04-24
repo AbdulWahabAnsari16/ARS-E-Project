@@ -7,7 +7,7 @@ namespace ARS.Models
         [Key]
         public int ClassID { get; set; }
         public string ClassName { get; set; }
-        public int Description { get; set; }
+        public string? Description { get; set; }
         public ICollection<FlightSchedule> Flights { get; set; }
         public ICollection<PricingRule> Rules { get; set; }
     }
