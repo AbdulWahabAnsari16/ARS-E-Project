@@ -8,12 +8,12 @@ namespace ARS.Models
         [Key]
         public int SegmentID { get; set; }
 
-        public int ReservationID { get; set; }
-        [ForeignKey("ReservationID")]
+        public int ReservationId { get; set; }
+        [ForeignKey("ReservationId")]
         public Reservation Reservation { get; set; }
 
-        public int ScheduleID { get; set; }
-        [ForeignKey("ScheduleID")]
+        public int ScheduleId { get; set; }
+        [ForeignKey("ScheduleId")]
         public FlightSchedule Schedule { get; set; }
 
         public int SegmentNumber { get; set; }

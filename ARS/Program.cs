@@ -8,6 +8,8 @@ builder.Services.AddControllersWithViews();
 
 var cs = "Server=LAB4-115\\MSSQLSERVER_22;Initial Catalog=ARSDB;User ID=sa;Password=aptech;TrustServerCertificate=True";
 builder.Services.AddDbContext<MainDbContext>(a => a.UseSqlServer(cs));
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -22,6 +24,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 

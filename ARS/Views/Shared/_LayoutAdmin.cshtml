@@ -1,4 +1,4 @@
-﻿
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HCA
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" asp-controller="Admin" asp-action="Index">ARS DashBoard</a>
+        <a class="navbar-brand ps-3" href="~/AdminAssets/index.html">Fruitables DashBoard</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="~/AdminAssets/#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -82,6 +82,7 @@
                             Add Cancel Policy
                         </a>
 
+
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="~/AdminAssets/layout-static.html">Static Navigation</a>
@@ -133,7 +134,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-
+                    @HCA.HttpContext.Session.GetString("name")
                 </div>
             </nav>
         </div>
@@ -163,5 +164,6 @@
     <script src="~/AdminAssets/assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="~/AdminAssets/js/datatables-simple.js"></script>
+    <script src="~/AdminAssets/js/datatables-simple2.js"></script>
 </body>
 </html>

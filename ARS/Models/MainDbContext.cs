@@ -7,11 +7,13 @@ namespace ARS.Models
         public MainDbContext(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<AdminLogin> AdminLogin { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<CancellationPolicy> CancellationPolicies { get; set; } // Fixed typo
         public DbSet<City> Cities { get; set; }
         public DbSet<Class> Classes { get; set; }
-        public DbSet<Flight> Flights { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+		public DbSet<Flight> Flights { get; set; }
         public DbSet<FlightRoutes> FlightRoutes { get; set; }
 
         public DbSet<FlightSchedule> FlightSchedules { get; set; }
@@ -33,39 +35,39 @@ namespace ARS.Models
             modelBuilder.Entity<FlightRoutes>()
                 .HasOne(fr => fr.OriginAirport)
                 .WithMany(a => a.OriginRoutes)
-                .HasForeignKey(fr => fr.OriginAirportID)
+                .HasForeignKey(fr => fr.OriginAirportId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<FlightRoutes>()
                 .HasOne(fr => fr.DestinationAirport)
                 .WithMany(a => a.DestinationRoutes)
-                .HasForeignKey(fr => fr.DestinationAirportID)
+                .HasForeignKey(fr => fr.DestinationAirportId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // Configure FlightSchedule relationships
             modelBuilder.Entity<FlightSchedule>()
                 .HasOne(fs => fs.DepartureAirport)
                 .WithMany(a => a.DepartureSchedules)
-                .HasForeignKey(fs => fs.DepartureAirportID)
+                .HasForeignKey(fs => fs.DepartureAirportId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<FlightSchedule>()
                 .HasOne(fs => fs.ArrivalAirport)
                 .WithMany(a => a.ArrivalSchedules)  // Explicitly maps to Airport.ArrivalSchedules
-                .HasForeignKey(fs => fs.ArrivalAirportID)
+                .HasForeignKey(fs => fs.ArrivalAirportId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // MileageHistory configurations
             modelBuilder.Entity<MileageHistory>()
                 .HasOne(m => m.Reservation)
                 .WithMany(r => r.History)
-                .HasForeignKey(m => m.ReservationID)
+                .HasForeignKey(m => m.ReservationId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<MileageHistory>()
                 .HasOne(m => m.User)
                 .WithMany(u => u.MileageHistories)
-                .HasForeignKey(m => m.UserID)
+                .HasForeignKey(m => m.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             // Decimal precision configurations

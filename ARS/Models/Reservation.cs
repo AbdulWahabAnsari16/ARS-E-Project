@@ -6,9 +6,9 @@ namespace ARS.Models
     public class Reservation
     {
         [Key]
-        public int ReservationID { get; set; }
-        public int UserID { get; set; }
-        [ForeignKey("UserID")]
+        public int ReservationId { get; set; }
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
         public User User { get; set; }
 
         public string Type { get; set; }

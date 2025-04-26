@@ -6,9 +6,9 @@ namespace ARS.Models
     public class PricingRule
     {
         [Key]
-        public int RuleID { get; set; }
-        public int ClassID { get; set; }
-        [ForeignKey("ClassID")]
+        public int RuleId { get; set; }
+        public int ClassId { get; set; }
+        [ForeignKey("ClassId")]
         public Class Class { get; set; }
         public int MinDaysBefore { get; set; }
         public int MaxDaysBefore { get; set; }

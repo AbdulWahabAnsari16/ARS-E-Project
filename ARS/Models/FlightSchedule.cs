@@ -8,24 +8,24 @@ namespace ARS.Models
         [Key]
         public int ScheduleID { get; set; }
 
-        public int FlightID { get; set; }
-        [ForeignKey("FlightID")]
+        public int FlightId { get; set; }
+        [ForeignKey("FlightId")]
         public Flight Flight { get; set; }
 
         // Departure Airport Relationship
-        public int DepartureAirportID { get; set; }
-        [ForeignKey("DepartureAirportID")]
+        public int DepartureAirportId { get; set; }
+        [ForeignKey("DepartureAirportId")]
         public Airport DepartureAirport { get; set; }  // Renamed from "Airport"
 
         // Arrival Airport Relationship
-        public int ArrivalAirportID { get; set; }
-        [ForeignKey("ArrivalAirportID")]
+        public int ArrivalAirportId { get; set; }
+        [ForeignKey("ArrivalAirportId")]
         public Airport ArrivalAirport { get; set; }  // Fixed typo ("Airpor" -> "ArrivalAirport")
 
         public DateTime DepartureDateTime { get; set; }
         public DateTime ArrivalDateTime { get; set; }
-        public int ClassID { get; set; }
-        [ForeignKey("ClassID")]
+        public int ClassId { get; set; }
+        [ForeignKey("ClassId")]
         public Class Class { get; set; }
         public int SeatsAvailable { get; set; }
 

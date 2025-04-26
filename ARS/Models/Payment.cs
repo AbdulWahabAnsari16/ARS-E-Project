@@ -6,9 +6,9 @@ namespace ARS.Models
     public class Payment
     {
         [Key]
-        public int PaymentID { get; set; }
-        public int ReservationID { get; set; }
-        [ForeignKey("ReservationID")]
+        public int PaymentId { get; set; }
+        public int ReservationId { get; set; }
+        [ForeignKey("ReservationId")]
         public Reservation Reservation { get; set; }
         public decimal Amount { get; set; }
         public DateTime PaymentDate { get; set; }

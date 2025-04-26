@@ -7,14 +7,14 @@ namespace ARS.Models
     {
         [Key]
         public int EntryID { get; set; }
-        public int ReservationID { get; set; }
-        [ForeignKey("ReservationID")]
+        public int ReservationId { get; set; }
+        [ForeignKey("ReservationId")]
         public Reservation Reservation { get; set; }
         public int MilesDelta { get; set; }
         public DateOnly EntryDate { get; set; }
         public string Reason { get; set; }
-        public int UserID { get; set; }
-        [ForeignKey("UserID")]
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
         public User User { get; set; }
     }
 }

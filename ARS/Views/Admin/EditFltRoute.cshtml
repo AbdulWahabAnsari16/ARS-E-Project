@@ -14,11 +14,11 @@
             <div class="card-body">
                 <h4 class="msg">@ViewBag.msg</h4>
                 <form method="post">
-                    <input type="hidden" asp-for="RouteID"/>
+                    <input type="hidden" asp-for="RouteId"/>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <select asp-for="OriginAirportID" asp-items="@ViewBag.airport" class="form-select mt-2">
+                                <select asp-for="OriginAirportId" asp-items="@ViewBag.airport" class="form-select mt-2">
                                     <option>Select a Origin Airport</option>
                                 </select>
                             </div>
@@ -26,7 +26,7 @@
 
                         <div class="col-md-6">
                             <div class="form-floating mb-3 mb-md-0">
-                                <select asp-for="DestinationAirportID" asp-items="@ViewBag.airport" class="form-select mt-2">
+                                <select asp-for="DestinationAirportId" asp-items="@ViewBag.airport" class="form-select mt-2">
                                     <option>Select a Destination Airport</option>
                                 </select>
                             </div>

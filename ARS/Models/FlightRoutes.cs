@@ -6,14 +6,14 @@ namespace ARS.Models
     public class FlightRoutes
     {
         [Key]
-        public int RouteID { get; set; }
+        public int RouteId { get; set; }
 
-        public int OriginAirportID { get; set; }
-        [ForeignKey("OriginAirportID")]
+        public int OriginAirportId { get; set; }
+        [ForeignKey("OriginAirportId")]
         public Airport OriginAirport { get; set; }
 
-        public int DestinationAirportID { get; set; }
-        [ForeignKey("DestinationAirportID")]
+        public int DestinationAirportId { get; set; }
+        [ForeignKey("DestinationAirportId")]
         public Airport DestinationAirport { get; set; }
 
         public double Distance { get; set; }

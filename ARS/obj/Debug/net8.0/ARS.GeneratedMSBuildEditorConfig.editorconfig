@@ -94,6 +94,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Admin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -130,20 +134,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1ByaWNpbmdSdWxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/BlogHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCbG9nSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/BlogSingle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCbG9nU2luZ2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Elements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFbGVtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Hotels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxIb3RlbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Insurance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbnN1cmFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/Packages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYWNrYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/User/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/_ViewImports.cshtml]
@@ -161,3 +201,7 @@ build_metadata.AdditionalFiles.CssScope = b-60mgpf08h0
 [C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-8nndqehjpq
+
+[C:/Users/asp.APTECHNK1/Desktop/ARS-E-Project/ARS/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-wrskjwgtig

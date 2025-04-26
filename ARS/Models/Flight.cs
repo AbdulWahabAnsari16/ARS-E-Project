@@ -5,7 +5,7 @@ namespace ARS.Models
     public class Flight
     {
         [Key]
-        public int FlightID { get; set; }
+        public int FlightId { get; set; }
         public string FlightNumber { get; set; }
         public string AircraftType { get; set; }
 

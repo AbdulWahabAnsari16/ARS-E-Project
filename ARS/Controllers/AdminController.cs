@@ -16,13 +16,60 @@ namespace ARS.Controllers
 
         public IActionResult Index()
         {
+			if (HttpContext.Session.GetInt32("id") == null)
+			{
+				return RedirectToAction("Login");
+			}
+            var list = db.Users.ToList();
+            return View(list);
+        }
+
+        public IActionResult DeleteUser(int? id)
+        {
+            var data = db.Users.Find(id);
+            db.Users.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //Authentication Section
+
+        public IActionResult Login()
+        {
+			if (HttpContext.Session.GetInt32("id") != null)
+			{
+				return RedirectToAction("Index");
+			}
+			return View();
+        }
+        [HttpPost]
+        public IActionResult Login(AdminLogin adminLogin)
+        {
+            var admin = db.AdminLogin.Where(db => db.Email == adminLogin.Email && db.Password == adminLogin.Password).FirstOrDefault();
+            if (admin != null)
+            {
+                HttpContext.Session.SetInt32("id", admin.Id);
+                HttpContext.Session.SetString("name", admin.Name);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.err = "Login Failed";
+            }
             return View();
         }
-        public IActionResult Users()
+		public IActionResult Logout()
+		{
+            HttpContext.Session.Clear();
+			return RedirectToAction("Login");
+		}
+
+		public IActionResult Users()
         {
             var list = db.Users.ToList();
             return View(list);
         }
+
 
         // City Section
         public IActionResult AddCity()
@@ -239,11 +286,11 @@ namespace ARS.Controllers
         public IActionResult AddFltSchedule()
         {
             var Flight = db.Flights.ToList();
-            ViewBag.flights = new SelectList(Flight, "FlightID", "FlightNumber");
+            ViewBag.flights = new SelectList(Flight, "FlightId", "FlightNumber");
             var airports = db.Airports.ToList();
             ViewBag.airports = new SelectList(airports, "AirportId", "IATACode");
             var classes = db.Classes.ToList();
-            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            ViewBag.classes = new SelectList(classes, "ClassId", "ClassName");
             return View();
         }
         [HttpPost]
@@ -268,11 +315,11 @@ namespace ARS.Controllers
         {
             var data = db.FlightSchedules.Find(id);
             var Flight = db.Flights.ToList();
-            ViewBag.flights = new SelectList(Flight, "FlightID", "FlightNumber");
+            ViewBag.flights = new SelectList(Flight, "FlightId", "FlightNumber");
             var airports = db.Airports.ToList();
             ViewBag.airports = new SelectList(airports, "AirportId", "IATACode");
             var classes = db.Classes.ToList();
-            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            ViewBag.classes = new SelectList(classes, "ClassId", "ClassName");
             return View(data);
         }
         [HttpPost]
@@ -294,7 +341,7 @@ namespace ARS.Controllers
         public IActionResult AddPricingRule()
         {
             var classes = db.Classes.ToList();
-            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            ViewBag.classes = new SelectList(classes, "ClassId", "ClassName");
             return View();
         }
         [HttpPost]
@@ -313,7 +360,7 @@ namespace ARS.Controllers
         {
             var data = db.PricingRules.Find(id);
             var classes = db.Classes.ToList();
-            ViewBag.classes = new SelectList(classes, "ClassID", "ClassName");
+            ViewBag.classes = new SelectList(classes, "ClassId", "ClassName");
             return View(data);
         }
         [HttpPost]
